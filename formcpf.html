@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+        <meta name="description" content="Cliente para testes com a SEFAZ Consulta">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/site.js"></script>
+        <title>
+            Validador de CPF
+        </title>
+        <style type="text/css">
+            .bs-example{
+                margin: 20px;
+            }
+        </style>
+</head>
+<body>
+    <div class="bs-example">
+        <div class="page-header col-xs-offset-2">
+                <h2>Validar CPF</h2>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-3 col-sm-2">
+                <form action="servicos/validacpf.php" method="post">
+                    <label for="inputCPF" class="control-label">CPF:</label>
+                    <div>
+                        <input type="text" name="inputCPF" id="inputCPF" value="" required class="form-control" >
+                    </div>
+                    <br/>
+                    <input type="submit" id="btnValidarCPF" name="btnValidarCPF" class="btn btn-primary" value="Validar">
+                </form>    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
