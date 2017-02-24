@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     $("#inputCPF").mask('999.999.999-99');
-    //$("#inputCNPJ").mask('');
+    $("#inputCNPJ").mask('99.999.999/9999-99');
 
     $("#btnValidarCPF").on("click", function(){        
 

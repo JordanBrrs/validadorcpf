@@ -11,6 +11,8 @@ if(isset($_POST['inputCPF']) && $_POST['inputCPF'] != ""){
 
 function validarCPF($cpf)
 {
+    //Essa sintaxe é do php 7
+    $cpf = preg_replace("/[^0-9]/","",$cpf);
     $retorno = false;
     if(!empty($cpf))
     {         
@@ -27,9 +29,7 @@ function validarCPF($cpf)
          {
              return false;
          }   
-
-        //Essa sintaxe é do php 7
-        $cpf = preg_replace("/[^0-9]/","",$cpf);
+        
         $cpfTemp = substr($cpf,0,9);
 
         $primDigito = calculaDigito($cpfTemp);
